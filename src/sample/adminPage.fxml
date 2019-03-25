@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="910.0" style="-fx-background-color: #03091c;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminController">
+   <children>
+      <TabPane layoutX="168.0" layoutY="49.0" prefHeight="829.0" prefWidth="715.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="LogFile">
+               <content>
+                  <Pane prefHeight="482.0" prefWidth="590.0" style="-fx-background-color: #e0da8b;">
+                     <children>
+                        <TableView fx:id="tablePurchase" layoutX="14.0" layoutY="66.0" prefHeight="639.0" prefWidth="684.0">
+                          <columns>
+                            <TableColumn fx:id="colCusName" prefWidth="188.0000457763672" text="Customer Name" />
+                            <TableColumn fx:id="colCode" prefWidth="73.5999755859375" text="Code" />
+                              <TableColumn fx:id="colProductName" prefWidth="167.20001220703125" text="Product Name" />
+                              <TableColumn fx:id="colSize" prefWidth="68.79998779296875" text="Size" />
+                              <TableColumn fx:id="colQty" prefWidth="71.199951171875" text="Qty" />
+                              <TableColumn fx:id="colCost" prefWidth="116.80010986328125" text="Cost" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="27.0" layoutY="24.0" prefHeight="29.0" prefWidth="198.0" text="Sales Details :" textFill="#121d8c" underline="true">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSearch" layoutX="422.0" layoutY="26.0" prefHeight="25.0" prefWidth="207.0" promptText="Search by Customer name" />
+                        <Button layoutX="631.0" layoutY="26.0" mnemonicParsing="false" onAction="#searchAction" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #357c4a;" text="Search" textFill="WHITE" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="Manage Staff Account">
+               <content>
+                  <Pane prefHeight="482.0" prefWidth="590.0" style="-fx-background-color: #e0da8b;">
+                     <children>
+                        <TextField id="txtName" fx:id="txtStaffName" layoutX="166.0" layoutY="129.0" prefHeight="40.0" prefWidth="336.0" promptText="Enter Staff Name" />
+                        <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="123.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/name.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField id="txtPassword" fx:id="txtPassword" layoutX="165.0" layoutY="231.0" prefHeight="40.0" prefWidth="336.0" promptText="Enter Password" />
+                        <ImageView fitHeight="36.0" fitWidth="28.0" layoutX="124.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/password.jpg" />
+                           </image>
+                        </ImageView>
+                        <PasswordField id="txtReEnterPassword" fx:id="txtReEnterPassword" layoutX="166.0" layoutY="284.0" prefHeight="40.0" prefWidth="335.0" promptText="Re-enter Password" />
+                        <ImageView fitHeight="36.0" fitWidth="28.0" layoutX="124.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/password.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextField id="txtContactNo" fx:id="txtContactNo" layoutX="165.0" layoutY="343.0" onKeyTyped="#numberOnlyAction" prefHeight="40.0" prefWidth="338.0" promptText="Contact Number" />
+                        <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="124.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/call.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="42.0" layoutY="23.0" prefHeight="29.0" prefWidth="273.0" text="Manage Staff Account:" textFill="#141f9a" underline="true">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnModifyAccount" layoutX="273.0" layoutY="453.0" mnemonicParsing="false" onAction="#modifyAccount" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #ddc50d;" text="Modify Staff" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+                           </font></Button>
+                        <Label fx:id="labelPassword" layoutX="503.0" layoutY="288.0" prefHeight="26.0" prefWidth="198.0" textFill="RED" />
+                        <Label fx:id="lblSuccessModification" layoutX="150.0" layoutY="400.0" prefHeight="33.0" prefWidth="367.0" textFill="#2c6413">
+                           <font>
+                              <Font name="Maiandra GD" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelPhoneno" layoutX="505.0" layoutY="347.0" prefHeight="26.0" prefWidth="181.0" textFill="RED" />
+                        <Button fx:id="btnRegister" layoutX="71.0" layoutY="453.0" mnemonicParsing="false" onAction="#addAccount" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #3fad20;" text="Add Staff" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+                           </font></Button>
+                        <Button fx:id="btnDeleteAc" layoutX="475.0" layoutY="453.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #ff2121;" text="Remove Staff" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+                           </font></Button>
+                        <TextField id="txtName" fx:id="txtId" layoutX="165.0" layoutY="71.0" prefHeight="40.0" prefWidth="336.0" promptText="Enter ID" />
+                        <ImageView fitHeight="28.0" fitWidth="48.0" layoutX="115.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/id.JPG" />
+                           </image>
+                        </ImageView>
+                        <TextField id="txtName" fx:id="txtStaffUserName" layoutX="165.0" layoutY="181.0" prefHeight="40.0" prefWidth="336.0" promptText="Enter Login Username " />
+                        <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="125.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblUserNameError" layoutX="503.0" layoutY="177.0" prefHeight="48.0" prefWidth="198.0" textFill="RED" />
+                        <TableView fx:id="tableStaffAccount" layoutX="27.0" layoutY="535.0" prefHeight="237.0" prefWidth="657.0">
+                          <columns>
+                            <TableColumn fx:id="colSID" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="colSName" prefWidth="159.20001220703125" text="Staff Name" />
+                              <TableColumn fx:id="colSUName" prefWidth="139.20001220703125" text="User Name" />
+                              <TableColumn fx:id="colSPass" prefWidth="119.20001220703125" text="Password" />
+                              <TableColumn fx:id="colSNo" prefWidth="166.39996337890625" text="Contact Number" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="Customer Details">
+               <content>
+                  <Pane prefHeight="482.0" prefWidth="590.0" style="-fx-background-color: #e0da8b;">
+                     <children>
+                        <TableView fx:id="tableCustomerDetails" layoutX="36.0" layoutY="67.0" prefHeight="539.0" prefWidth="641.0">
+                          <columns>
+                            <TableColumn fx:id="colCustomerName" prefWidth="112.79995727539062" text="Name" />
+                            <TableColumn fx:id="colCusMail" prefWidth="170.4000244140625" text="Email" />
+                              <TableColumn fx:id="colCusGender" prefWidth="96.79998779296875" text="Gender" />
+                              <TableColumn fx:id="colCusPhone" prefWidth="124.79998779296875" text="Phone" />
+                              <TableColumn fx:id="colCusAddress" prefWidth="138.4000244140625" text="Address" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="36.0" layoutY="28.0" prefHeight="29.0" prefWidth="248.0" text="Customer Details :" textFill="#121d8c" underline="true">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="btnLogout" layoutX="32.0" layoutY="175.0" mnemonicParsing="false" onAction="#logOutAction" prefHeight="46.0" prefWidth="106.0" style="-fx-background-color: #637216;" text="LOG-OUT" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="16.0" />
+         </font></Button>
+      <Label layoutX="384.0" layoutY="15.0" text="Jeff's" textFill="WHITE">
+         <font>
+            <Font name="Old English Text MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="15.0" text="Fishing" textFill="#57c6e2">
+         <font>
+            <Font name="Old English Text MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="514.0" layoutY="15.0" text="Shack" textFill="WHITE">
+         <font>
+            <Font name="Old English Text MT" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="344.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="55.0" layoutY="50.0" text="Profile" textFill="#b6c0ff">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="35.0" layoutY="76.0" prefHeight="2.0" prefWidth="94.0" />
+      <Label layoutX="32.0" layoutY="103.0" text="*  Name: Jeff" textFill="WHITE" />
+      <Separator layoutX="38.0" layoutY="146.0" prefHeight="2.0" prefWidth="94.0" />
+      <Label layoutX="744.0" layoutY="14.0" prefHeight="26.0" prefWidth="138.0" text="Welcome Jeff" textFill="#3dbfac">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="29.0" layoutY="245.0" mnemonicParsing="false" onAction="#exitAction" prefHeight="46.0" prefWidth="106.0" style="-fx-background-color: #e83e3e;" text="EXIT" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

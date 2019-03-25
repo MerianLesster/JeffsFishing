@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="910.0" style="-fx-background-color: #03091c;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StaffController">
+   <children>
+      <TabPane layoutX="168.0" layoutY="49.0" prefHeight="829.0" prefWidth="715.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="LogFile">
+               <content>
+                  <Pane prefHeight="482.0" prefWidth="590.0" style="-fx-background-color: #e0da8b;">
+                     <children>
+                        <TableView fx:id="tablePurchase" layoutX="14.0" layoutY="59.0" prefHeight="639.0" prefWidth="684.0">
+                           <columns>
+                              <TableColumn fx:id="colCusName" prefWidth="188.0000457763672" text="Customer Name" />
+                              <TableColumn fx:id="colCode" prefWidth="73.5999755859375" text="Code" />
+                              <TableColumn fx:id="colProductName" prefWidth="167.20001220703125" text="Product Name" />
+                              <TableColumn fx:id="colSize" prefWidth="68.79998779296875" text="Size" />
+                              <TableColumn fx:id="colQty" prefWidth="71.199951171875" text="Qty" />
+                              <TableColumn fx:id="colCost" prefWidth="116.80010986328125" text="Cost" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="27.0" layoutY="24.0" prefHeight="29.0" prefWidth="198.0" text="Sales Details :" textFill="#121d8c" underline="true">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="Customer Details">
+               <content>
+                  <Pane prefHeight="482.0" prefWidth="590.0" style="-fx-background-color: #e0da8b;">
+                     <children>
+                        <TableView fx:id="tableCustomerDetails" layoutX="36.0" layoutY="67.0" prefHeight="539.0" prefWidth="641.0">
+                           <columns>
+                              <TableColumn fx:id="colCustomerName" prefWidth="142.39993286132812" text="Name" />
+                              <TableColumn fx:id="colCusMail" prefWidth="163.20001220703125" text="Email" />
+                              <TableColumn fx:id="colCusGender" prefWidth="87.199951171875" text="Gender" />
+                              <TableColumn fx:id="colCusPhone" prefWidth="116.79998779296875" text="Phone" />
+                              <TableColumn fx:id="colCusAddress" prefWidth="133.5999755859375" text="Address" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="36.0" layoutY="28.0" prefHeight="29.0" prefWidth="248.0" text="Customer Details :" textFill="#121d8c" underline="true">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="btnLogout" layoutX="32.0" layoutY="175.0" mnemonicParsing="false" onAction="#logOutAction" prefHeight="46.0" prefWidth="106.0" style="-fx-background-color: #637216;" text="LOG-OUT" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="384.0" layoutY="15.0" text="Jeff's" textFill="WHITE">
+         <font>
+            <Font name="Old English Text MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="15.0" text="Fishing" textFill="#57c6e2">
+         <font>
+            <Font name="Old English Text MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="514.0" layoutY="15.0" text="Shack" textFill="WHITE">
+         <font>
+            <Font name="Old English Text MT" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="344.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="55.0" layoutY="50.0" text="Profile" textFill="#b6c0ff">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="35.0" layoutY="76.0" prefHeight="2.0" prefWidth="94.0" />
+      <Label layoutX="27.0" layoutY="103.0" text="*  Name: " textFill="WHITE" />
+      <Separator layoutX="38.0" layoutY="146.0" prefHeight="2.0" prefWidth="94.0" />
+      <Label layoutX="654.0" layoutY="13.0" prefHeight="26.0" prefWidth="94.0" text="Welcome " textFill="#3dbfac">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="29.0" layoutY="245.0" mnemonicParsing="false" onAction="#exitAction" prefHeight="46.0" prefWidth="106.0" style="-fx-background-color: #e83e3e;" text="EXIT" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="19.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblUser" layoutX="92.0" layoutY="103.0" prefHeight="18.0" prefWidth="67.0" textFill="#fdfdfd" />
+      <Label fx:id="welcomeUser" layoutX="740.0" layoutY="15.0" prefHeight="22.0" prefWidth="121.0" textAlignment="CENTER" textFill="#3dbfac">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

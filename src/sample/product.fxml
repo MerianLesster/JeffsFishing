@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="813.0" prefWidth="900.0" style="-fx-background-color: #03091c;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ProductController">
+   <children>
+      <TabPane layoutX="168.0" layoutY="69.0" prefHeight="710.0" prefWidth="710.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Purchase">
+               <content>
+                  <Pane prefHeight="402.0" prefWidth="694.0" style="-fx-background-color: #e0da8b;">
+                     <children>
+                        <Pane fx:id="pane1" layoutX="17.0" layoutY="14.0" prefHeight="195.0" prefWidth="675.0" style="-fx-background-color: #03091c;">
+                           <children>
+                              <Button fx:id="btnPurchase1" layoutX="536.0" layoutY="127.0" mnemonicParsing="false" onAction="#fishingLineAction" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #8bdbef;" text="Purchase">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="16.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="170.0" fitWidth="210.0" focusTraversable="true" layoutX="35.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/fishingLine.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ChoiceBox fx:id="cbSelect1" layoutX="323.0" layoutY="50.0" prefHeight="25.0" prefWidth="94.0" />
+                              <Label layoutX="76.0" layoutY="12.0" text="Fishing Line" textFill="#280f67">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblPriceLabel1" layoutX="267.0" layoutY="21.0" text="100m is Rs.250" textFill="WHITE" />
+                              <TextField fx:id="txtQty1" layoutX="335.0" layoutY="87.0" onKeyTyped="#numberOnlyAction" prefHeight="25.0" prefWidth="82.0" promptText="Qty" />
+                              <Label layoutX="267.0" layoutY="91.0" text="Quantity:" textFill="WHITE" />
+                              <TextArea fx:id="txtSummary1" editable="false" layoutX="457.0" layoutY="17.0" prefHeight="95.0" prefWidth="200.0" promptText="Purchase Summary" />
+                              <Label fx:id="lblQtError1" layoutX="426.0" layoutY="84.0" textFill="#ff1e1e">
+                                 <font>
+                                    <Font name="Brush Script MT Italic" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="267.0" layoutY="54.0" text="Length:" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2" layoutX="18.0" layoutY="227.0" prefHeight="195.0" prefWidth="675.0" style="-fx-background-color: #03091c;">
+                           <children>
+                              <Button fx:id="btnPurchase2" layoutX="538.0" layoutY="128.0" mnemonicParsing="false" onAction="#sinkersAction" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #8bdbef;" text="Purchase">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="16.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="170.0" fitWidth="210.0" focusTraversable="true" layoutX="34.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sinkers.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ChoiceBox fx:id="cbSelect2" layoutX="319.0" layoutY="53.0" prefHeight="25.0" prefWidth="100.0" />
+                              <Label fx:id="lblPriceLabel2" layoutX="268.0" layoutY="26.0" text="30g is Rs.300" textFill="WHITE" />
+                              <TextField fx:id="txtQty2" layoutX="336.0" layoutY="90.0" onKeyTyped="#numberOnlyAction" prefHeight="25.0" prefWidth="82.0" promptText="Qty" />
+                              <Label layoutX="270.0" layoutY="92.0" text="Quantity:" textFill="WHITE" />
+                              <Label layoutX="95.0" layoutY="12.0" text="Sinkers" textFill="#280f67">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="txtSummary2" editable="false" layoutX="459.0" layoutY="18.0" prefHeight="95.0" prefWidth="200.0" promptText="Purchase Summary" />
+                              <Label fx:id="lblQtError2" layoutX="426.0" layoutY="88.0" textFill="#ff1e1e">
+                                 <font>
+                                    <Font name="Brush Script MT Italic" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="268.0" layoutY="57.0" text="Weight:" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3" layoutX="17.0" layoutY="440.0" prefHeight="220.0" prefWidth="675.0" style="-fx-background-color: #03091c;">
+                           <children>
+                              <Button fx:id="btnPurchase3" layoutX="538.0" layoutY="128.0" mnemonicParsing="false" onAction="#swivelsAction" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #8bdbef;" text="Purchase">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="16.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="159.0" fitWidth="185.0" focusTraversable="true" layoutX="34.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/swivels.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ChoiceBox fx:id="cbSelect3" layoutX="319.0" layoutY="94.0" prefHeight="25.0" prefWidth="100.0" />
+                              <Label fx:id="lblPriceLabel3" layoutX="268.0" layoutY="26.0" text="Small is Rs.250" textFill="WHITE" />
+                              <TextField fx:id="txtQty3" layoutX="336.0" layoutY="133.0" onKeyTyped="#numberOnlyAction" prefHeight="25.0" prefWidth="82.0" promptText="Qty" />
+                              <Label layoutX="270.0" layoutY="135.0" text="Quantity:" textFill="WHITE" />
+                              <Label layoutX="34.0" layoutY="19.0" prefHeight="26.0" prefWidth="185.0" style="-fx-background-color: #f2eded;" text="            Swivels " textFill="#280f67">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="txtSummary3" editable="false" layoutX="459.0" layoutY="18.0" prefHeight="95.0" prefWidth="200.0" promptText="Purchase Summary" />
+                              <ImageView fitHeight="53.0" fitWidth="185.0" layoutX="34.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/s.JPG" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="267.0" layoutY="45.0" prefHeight="17.0" prefWidth="119.0" text="Medium is Rs.500" textFill="WHITE" />
+                              <Label layoutX="267.0" layoutY="65.0" prefHeight="17.0" prefWidth="119.0" text="Large is Rs.750" textFill="WHITE" />
+                              <Label fx:id="lblQtError3" layoutX="426.0" layoutY="131.0" textFill="#ff1e1e">
+                                 <font>
+                                    <Font name="Brush Script MT Italic" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="270.0" layoutY="100.0" prefHeight="17.0" prefWidth="36.0" text="Size:" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+          <Tab closable="false" text="Email Enquires">
+               <content>
+                  <Pane style="-fx-background-color: #e0da8b;">
+                     <children>
+                        <Button fx:id="btnSendEnquire" layoutX="515.0" layoutY="326.0" mnemonicParsing="false" onAction="#sendEnquireAction" prefHeight="46.0" prefWidth="156.0" style="-fx-background-color: #2d21b7;" text="Send Enquire" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                           </font></Button>
+                        <TextArea fx:id="txtEnquire" layoutX="29.0" layoutY="52.0" prefHeight="243.0" prefWidth="653.0" promptText="Enquires" />
+                        <Label layoutX="29.0" layoutY="27.0" prefHeight="17.0" prefWidth="553.0" text="You can write the Enquires and send it to the Admin." />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="Modify Account">
+               <content>
+                  <Pane prefHeight="335.0" prefWidth="494.0" style="-fx-background-color: #e0da8b;">
+                     <children>
+                        <TextField id="txtName" fx:id="txtName" editable="false" layoutX="156.0" layoutY="77.0" prefHeight="40.0" prefWidth="336.0" />
+                        <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="121.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/user.png" />
+                           </image>
+                        </ImageView>
+                        <TextField id="txtMailAdd" fx:id="txtMailAdd" layoutX="156.0" layoutY="125.0" onMouseClicked="#clickMailAction" prefHeight="40.0" prefWidth="336.0" promptText="Enter Valid Email address" />
+                        <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="120.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mail.JPG" />
+                           </image>
+                        </ImageView>
+                        <PasswordField id="txtPassword" fx:id="txtPassword" layoutX="156.0" layoutY="174.0" prefHeight="40.0" prefWidth="336.0" promptText="Enter Password" />
+                        <ImageView fitHeight="36.0" fitWidth="28.0" layoutX="119.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/password.jpg" />
+                           </image>
+                        </ImageView>
+                        <PasswordField id="txtReEnterPassword" fx:id="txtReEnterPassword" layoutX="157.0" layoutY="227.0" prefHeight="40.0" prefWidth="335.0" promptText="Re-enter Password" />
+                        <ImageView fitHeight="36.0" fitWidth="28.0" layoutX="119.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/password.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="157.0" layoutY="275.0" text="Choose Gender" />
+                        <RadioButton id="radioMale" fx:id="rdoMale" layoutX="185.0" layoutY="302.0" mnemonicParsing="false" text="Male">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="genders" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton id="radioFemale" fx:id="rdoFemale" layoutX="275.0" layoutY="302.0" mnemonicParsing="false" text="Female" toggleGroup="$genders" />
+
+                        <ImageView fitHeight="38.0" fitWidth="28.0" layoutX="118.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/gender.JPG" />
+                           </image>
+                        </ImageView>
+                        <TextField id="txtContactNo" fx:id="txtContactNo" layoutX="155.0" layoutY="333.0" onKeyTyped="#numberOnlyAction" prefHeight="40.0" prefWidth="338.0" promptText="Contact Number" />
+                        <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="118.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/call.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="31.0" layoutY="24.0" prefHeight="29.0" prefWidth="193.0" text="Modify Account:">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnModifyAccount" layoutX="502.0" layoutY="519.0" mnemonicParsing="false" onAction="#modifyAccount" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #924ff7;" text="Modify Account" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font></Button>
+                        <Label fx:id="labelEmail" layoutX="502.0" layoutY="132.0" prefHeight="26.0" prefWidth="191.0" textFill="RED" />
+                        <Label fx:id="labelPassword" layoutX="502.0" layoutY="234.0" prefHeight="26.0" prefWidth="198.0" textFill="RED" />
+                        <Label fx:id="lblSuccessModification" layoutX="121.0" layoutY="469.0" prefHeight="33.0" prefWidth="367.0" textFill="#2c6413">
+                           <font>
+                              <Font name="Maiandra GD" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelPhoneno" layoutX="502.0" layoutY="340.0" prefHeight="26.0" prefWidth="181.0" textFill="RED" />
+                        <TextField id="txtName" fx:id="txtAddress" layoutX="155.0" layoutY="387.0" prefHeight="40.0" prefWidth="335.0" promptText="Enter Home Address" />
+                        <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="118.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/address.JPG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="btnLogout" layoutX="32.0" layoutY="339.0" mnemonicParsing="false" onAction="#logOutAction" prefHeight="44.0" prefWidth="106.0" style="-fx-background-color: #637216;" text="LOG-OUT" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="17.0" />
+         </font></Button>
+      <Label layoutX="392.0" layoutY="15.0" text="Jeff's" textFill="WHITE">
+         <font>
+            <Font name="Old English Text MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="15.0" text="Fishing" textFill="#57c6e2">
+         <font>
+            <Font name="Old English Text MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="522.0" layoutY="15.0" text="Shack" textFill="WHITE">
+         <font>
+            <Font name="Old English Text MT" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="352.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="15.0" layoutY="185.0" mnemonicParsing="false" onAction="#newsLetterAction" prefHeight="87.0" prefWidth="139.0" style="-fx-background-color: #e09a21;" text="SignUp &#10;for &#10;News Letters" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font></Button>
+      <Label layoutX="55.0" layoutY="38.0" text="Profile" textFill="#b6c0ff">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="35.0" layoutY="64.0" prefHeight="2.0" prefWidth="94.0" />
+      <Label layoutX="18.0" layoutY="91.0" text="*  Name:" textFill="WHITE" />
+      <Label layoutX="18.0" layoutY="113.0" text="*  Purchases:" textFill="WHITE" />
+      <Label fx:id="lblUser" layoutX="82.0" layoutY="92.0" prefHeight="18.0" prefWidth="106.0" textFill="#fdfdfd" />
+      <Label fx:id="lblPurchases" layoutX="111.0" layoutY="113.0" prefHeight="18.0" prefWidth="74.0" textFill="WHITE" />
+      <Separator layoutX="38.0" layoutY="149.0" prefHeight="2.0" prefWidth="94.0" />
+      <Label layoutX="725.0" layoutY="6.0" prefHeight="24.0" prefWidth="86.0" text="Welcome " textFill="#3dbfac">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="welcomeUser" layoutX="773.0" layoutY="30.0" prefHeight="22.0" prefWidth="121.0" textAlignment="CENTER" textFill="#3dbfac">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="32.0" layoutY="403.0" mnemonicParsing="false" onAction="#exitAction" prefHeight="46.0" prefWidth="106.0" style="-fx-background-color: #e83e3e;" text="EXIT" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="19.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblnewsLetters" layoutX="20.0" layoutY="285.0" prefHeight="34.0" prefWidth="139.0" textFill="#00cf0e">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
